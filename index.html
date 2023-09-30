@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,55 +21,62 @@
             background-color: #1A202C;
             color: #E2E8F0;
         }
-       /* Stil untuk input chat yang menetapkan posisi di bagian bawah */
-/* Stil untuk input chat yang menetapkan posisi di bagian bawah */
-.chat-input {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #2d374800;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-   
-   
-}
 
-.chat-input input[type="text"] {
-    flex: 1;
-    border: none;
-    padding: 10px 40px 10px 10px; /* Penyesuaian lebar input dan jarak dari ikon kirim */
-    border-radius: 999px;
-    outline: none;
-    background-color: #284469;
-    color: #dbe0eb;
- margin-bottom: 15px;
- border: 1px solid #4A90E2;
- margin-left: 80px;
- box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.219);
-}
+        /* Stil untuk input chat yang menetapkan posisi di bagian bawah */
+        /* Stil untuk input chat yang menetapkan posisi di bagian bawah */
+        .chat-input {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #2d374800;
+            padding: 10px;
+            display: flex;
+            align-items: center;
 
-.chat-input button {
-    background-color: transparent; /* Latar belakang tombol transparan */
-    border: none;
-    padding: 0; /* Hapus padding pada tombol */
-    margin-left: -40px; /* Geser ikon kirim ke kiri untuk menutupi input */
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    margin-right: 5%;
-    
-   
-}
 
-/* Gaya ikon di dalam tombol */
-.chat-input button i {
-    color: #4aec4a; /* Warna ikon kirim */
-    font-size: 20px; /* Ukuran ikon kirim */
-   
-}
+        }
+
+        .chat-input input[type="text"] {
+            flex: 1;
+            border: none;
+            padding: 10px 40px 10px 10px;
+            /* Penyesuaian lebar input dan jarak dari ikon kirim */
+            border-radius: 999px;
+            outline: none;
+            background-color: #284469;
+            color: #dbe0eb;
+            margin-bottom: 15px;
+            border: 1px solid #4A90E2;
+            margin-left: 80px;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.219);
+        }
+
+        .chat-input button {
+            background-color: transparent;
+            /* Latar belakang tombol transparan */
+            border: none;
+            padding: 0;
+            /* Hapus padding pada tombol */
+            margin-left: -40px;
+            /* Geser ikon kirim ke kiri untuk menutupi input */
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            margin-right: 5%;
+
+
+        }
+
+        /* Gaya ikon di dalam tombol */
+        .chat-input button i {
+            color: #4aec4a;
+            /* Warna ikon kirim */
+            font-size: 20px;
+            /* Ukuran ikon kirim */
+
+        }
 
         /* Stil untuk card produk makanan */
         .food-card {
@@ -78,22 +86,37 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             background-color: #2D3748;
         }
+
         .food-card img {
             width: 100%;
             height: auto;
         }
+
         .food-card .food-info {
             padding: 1rem;
             color: #E2E8F0;
         }
-         /* teks */
-         h1 {
+
+        /* teks */
+        h1 {
             font-family: 'Rampart One', cursive;
         }
     </style>
-  
-  <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="0c3fb108-957b-4cc4-ad85-e1a0114f4cfd";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+
+    <script type="text/javascript">
+        window.$crisp = [];
+        window.CRISP_WEBSITE_ID = "0c3fb108-957b-4cc4-ad85-e1a0114f4cfd";
+        (function () {
+            d = document;
+            s = d.createElement("script");
+            s.src = "https://client.crisp.chat/l.js";
+            s.async = 1;
+            d.getElementsByTagName("head")[0].appendChild(s);
+        })();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
+
 <body>
     <div class="container mx-auto p-4">
         <div class="bg-gray-800 rounded-lg shadow-lg p-4 mb-4 text-white">
@@ -103,28 +126,30 @@
             <!-- Card Produk Makanan -->
             <div class="flex flex-wrap">
                 <!-- Card Produk Makanan -->
-                <div class="w-1/2 md:w-1/3 lg:w-1/4 p-2">
-                    <div class="food-card" id="baso">
+                <!-- Contoh elemen HTML untuk produk "Pastel" -->
+                <div class="w-1/2 md:w-1/3 lg:w-1/4 p-2" id="pastel">
+                    <div class="food-card">
                         <img src="assets/img/pastel.png" alt="Makanan 1">
                         <div class="food-info">
                             <h2 class="text-lg font-semibold">Pastel</h2>
-
                             <p class="text-orange-500 font-semibold mt-2 text-sm">Rp.5000/porsi</p>
                         </div>
                     </div>
                 </div>
-                <div class="w-1/2 md:w-1/3 lg:w-1/4 p-2">
-                    <div class="food-card" id="nasi">
-                        <img src="assets/img/drink.png" alt="Makanan 1">
+
+                <!-- Contoh elemen HTML untuk produk "Drink" -->
+                <div class="w-1/2 md:w-1/3 lg:w-1/4 p-2" id="drink">
+                    <div class="food-card">
+                        <img src="assets/img/drink.png" alt="Makanan 2">
                         <div class="food-info">
                             <h2 class="text-lg font-semibold">Drink</h2>
-                           
                             <p class="text-orange-500 font-semibold mt-2 text-sm">Rp.5000/cup</p>
                         </div>
                     </div>
                 </div>
                 
-               
+
+
 
                 <!-- Tambahkan card lainnya di sini dengan ID yang sesuai -->
             </div>
@@ -151,177 +176,135 @@
                 <i class="fas fa-paper-plane"></i>
             </button>
         </div>
-        
+
     </div>
 
+
+<!-- Di dalam tag <script> Anda -->
     <script>
-// Fungsi untuk menampilkan card produk dalam chatbot container
-function showProductCard(productName, productDescription, productPrice, productImage) {
-    const chatContainer = document.getElementById('chat-card');
-
-    // Buat elemen card produk
-    const foodCard = document.createElement('div');
-    foodCard.classList.add('food-card');
-
-    const foodImage = document.createElement('img');
-    foodImage.src = productImage;
-    foodImage.alt = productName;
-
-    const foodInfo = document.createElement('div');
-    foodInfo.classList.add('food-info');
-
-    const foodName = document.createElement('h2');
-    foodName.classList.add('text-lg', 'font-semibold');
-    foodName.textContent = productName;
-
-    const foodDescription = document.createElement('p');
-    foodDescription.classList.add('text-gray-400');
-    foodDescription.textContent = productDescription;
-
-    const foodPrice = document.createElement('p');
-    foodPrice.classList.add('text-orange-500', 'font-semibold', 'mt-2');
-    foodPrice.textContent = productPrice;
-
-    const buyButton = document.createElement('button');
-    buyButton.classList.add('bg-blue-500', 'text-white', 'rounded-lg', 'px-4', 'py-2', 'mb-2', 'float-right', 'mt-2', 'hover:bg-blue-600');
-    buyButton.textContent = 'Beli';
-
-    // Tambahkan event listener untuk tombol "Beli" di sini
-    buyButton.addEventListener('click', function() {
-        // Dapatkan judul dan harga produk yang akan dibeli
-        const judulCard = productName;
-        const hargaCard = productPrice;
-
-        // Kirim pesan ke Crisp
-        const message = `Halo, saya ingin membeli ${judulCard} seharga ${hargaCard}.`;
-
-        if (typeof $crisp !== "undefined") {
-            $crisp.push(['do', 'message:send', ['text', message]]);
-        } else {
-            console.error("Crisp Chat tidak dapat ditemukan.");
+        const products = [
+            {
+                name: 'Pastel',
+                description: 'Lezat isi usus, hati, ayam suwir',
+                price: 'Rp.5000/porsi',
+                imageUrl: 'assets/img/pastel.png'
+            },
+            {
+                name: 'Drink',
+                description: 'Tersedi es jeruk, coklat, anggur',
+                price: 'Rp.5000/cup',
+                imageUrl: 'assets/img/drink.png'
+            },
+          
+            // Tambahkan produk lainnya di sini
+        ];
+    
+        function createProductCard(product) {
+            const card = document.createElement('div');
+            card.className = 'food-card';
+            card.innerHTML = `
+                <img src="${product.imageUrl}" alt="${product.name}">
+                <div class="food-info">
+                    <h2 class="text-lg font-semibold">${product.name}</h2>
+                    <p class="text-gray-400">${product.description}</p>
+                    <p class="text-orange-500 font-semibold mt-2 text-sm">${product.price}</p>
+                    <button class="bg-blue-500 text-white rounded-lg px-4 py-2 mb-2 float-right mt-2 hover:bg-blue-600">Beli</button>
+                </div>
+            `;
+    
+            card.querySelector('button').addEventListener('click', () => buyProduct(product));
+            return card;
         }
-
-        // Tambahkan kode lainnya sesuai kebutuhan Anda, seperti menampilkan pesan terkirim
-        // atau mengubah tampilan card produk setelah pembelian.
-    });
-
-    // Gabungkan semua elemen
-    foodInfo.appendChild(foodName);
-    foodInfo.appendChild(foodDescription);
-    foodInfo.appendChild(foodPrice);
-    foodInfo.appendChild(buyButton);
-
-    foodCard.appendChild(foodImage);
-    foodCard.appendChild(foodInfo);
-
-    // Hapus konten sebelumnya dan tambahkan card produk ke dalam chatbot container
-    chatContainer.innerHTML = '';
-    chatContainer.appendChild(foodCard);
-
-    // Scroll otomatis ke card produk yang ditampilkan
-    chatContainer.scrollIntoView({ behavior: 'smooth' });
-}
-
-
-// Fungsi untuk mencari produk berdasarkan kata kunci
-function searchProductsByKeyword(keyword) {
-    const chatContainer = document.getElementById('chat-card');
-    const products = [
-    {
-        name: 'Pastel',
-        description: 'Lezat isi usus, hati, ayam suwir',
-        price: 'Rp.5000/porsi',
-        imageUrl: 'assets/img/pastel.png' // Ganti "baso.jpg" dengan nama gambar yang sesuai.
-    },
-    {
-        name: 'Drink',
-        description: 'Tersedi es jeruk, coklat, anggur',
-        price: 'Rp.5000/cup',
-        imageUrl: 'assets/img/drink.png' // Ganti "nasi.jpg" dengan nama gambar yang sesuai.
-    },
-   
-    // Tambahkan card lainnya di sini sesuai kebutuhan Anda
-];
-
-
-    // Bersihkan chatContainer
-    chatContainer.innerHTML = '';
-
-    // Pisahkan pesan pengguna menjadi kata-kata
-    const keywords = keyword.toLowerCase().split(' ');
-
-    // Loop melalui produk dan cek apakah setiap kata dalam pesan pengguna cocok dengan nama produk
-    products.forEach(product => {
-        const productNameLower = product.name.toLowerCase();
-        if (keywords.some(kw => productNameLower.includes(kw))) {
-            // Jika ada kecocokan, tampilkan card produk
-            showProductCard(product.name, product.description, product.price, product.imageUrl);
+    
+        function showProductCard(product) {
+            const chatContainer = document.getElementById('chat-card');
+            chatContainer.innerHTML = '';
+            chatContainer.appendChild(createProductCard(product));
+            chatContainer.scrollIntoView({ behavior: 'smooth' });
         }
-    });
-
-    // Jika tidak ada produk yang cocok dengan kata kunci, beri pesan bahwa tidak ditemukan
-    if (chatContainer.innerHTML === '') {
-        const chatMessage = document.createElement('div');
-        chatMessage.classList.add('mb-4');
-        chatMessage.innerHTML = `
-            <div class="bg-blue-500 text-white rounded-lg p-2">
-                <p class="text-sm">Maaf, saya tidak dapat menemukan produk yang sesuai dengan kata kunci "${keyword}".</p>
-            </div>
-        `;
-        chatContainer.appendChild(chatMessage);
+    
+        function searchProductsByKeyword(keyword) {
+            const chatContainer = document.getElementById('chat-card');
+            chatContainer.innerHTML = '';
+            const keywords = keyword.toLowerCase().split(' ');
+            products.forEach(product => {
+                if (keywords.some(kw => product.name.toLowerCase().includes(kw))) {
+                    showProductCard(product);
+                }
+            });
+            chatContainer.scrollIntoView({ behavior: 'smooth' });
+        }
+    
+        function getUserMessage() {
+            const message = userMessage.value.trim();
+            userMessage.value = '';
+            searchProductsByKeyword(message);
+            if (message !== '' && typeof $crisp !== 'undefined') {
+                $crisp.push(['do', 'message:send', ['text', message]]);
+               
+            } else if (message !== '') {
+                console.error('Crisp Chat tidak dapat ditemukan.');
+            }
+        }
+    
+        function buyProduct(product) {
+    const message = `Halo, saya ingin membeli ${product.name} seharga ${product.price}.`;
+    if (typeof $crisp !== 'undefined') {
+        $crisp.push(['do', 'message:send', ['text', message]]);
+    } else {
+        console.error('Crisp Chat tidak dapat ditemukan.');
     }
 
-    // Scroll otomatis ke hasil pencarian
-    chatContainer.scrollIntoView({ behavior: 'smooth' });
+    // Menampilkan SweetAlert dengan ikon di antara logo dan teks "product"
+Swal.fire({
+    title: 'Terima kasih telah membeli!',
+    html: `<div class="popup-content" style="display: flex; align-items: center; justify-content: center;">
+                <img src="assets/img/logo.png" alt="Logo Anda" style="max-width: 100px;">
+                <i class="fas fa-grip-lines-vertical" style="font-size: 24px; margin: 0 10px;"></i>
+                <i class="swal2-success-circular-line-left" style="margin: 0 5px;"></i>
+                <p style="text-align: center; margin-bottom: 10px;">product</p>
+           </div>
+           <p>Pesanan Anda telah berhasil diproses.</p>`,
+    icon: null, // Menghapus ikon bawaan SweetAlert2
+    confirmButtonText: 'OK',
+    customClass: {
+        popup: 'my-custom-popup',
+        title: 'my-custom-title',
+        content: 'my-custom-content',
+        confirmButton: 'my-custom-button'
+    },
+    showCloseButton: true,
+    timer: 5000,
+    timerProgressBar: true,
+    position: 'center',
+    showClass: {
+        popup: 'animate__animated animate__zoomIn',
+    },
+    hideClass: {
+        popup: 'animate__animated animate__zoomOut',
+    }
+});
+
 }
 
-// Fungsi untuk mengambil input pesan pengguna
-function getUserMessage() {
-    const userInput = document.getElementById('userMessage');
-    const message = userInput.value.trim();
-
-    // Bersihkan input
-    userInput.value = '';
-
-    // Panggil fungsi pencarian berdasarkan kata kunci
-    const productInfo = searchProductsByKeyword(message);
-
-    // Kirim pesan pengguna ke Crisp
-    if (message !== '') {
-        $crisp.push(['set', 'user:email', ['user@example.com']]);
-        $crisp.push(['set', 'session:data', [['pesan_user', message]]]);
-        $crisp.push(['do', 'chat:send', ['text', `Pesan pengguna: "${message}"`]]);
-    }
-
-    // Kirim judul dan harga card produk ke Crisp jika ada hasil pencarian
-    if (productInfo) {
-        const productName = productInfo.name;
-        const productPrice = productInfo.price;
-        $crisp.push(['do', 'chat:send', ['text', `Judul Produk: ${productName}\nHarga Produk: ${productPrice}`]]);
-    }
-}
 
 
-// Event listener untuk tombol kirim
-document.getElementById('sendMessageButton').addEventListener('click', getUserMessage);
-
-// Event listener untuk tombol 'Enter' pada keyboard
-document.getElementById('userMessage').addEventListener('keyup', function(event) {
-    if (event.key === 'Enter') {
-        getUserMessage();
-    }
-});
-// Event listener untuk card "baso"
-document.getElementById('baso').addEventListener('click', function() {
-    showProductCard('Pastel', 'Lezat isi usus, hati, ayam suwir', 'Rp.5000/porsi', 'assets/img/pastel.png');
-});
-
-// Event listener untuk card "nasi"
-document.getElementById('nasi').addEventListener('click', function() {
-    showProductCard('Drink', 'Tersedi es jeruk, coklat, anggur', 'Rp.5000/cup', 'assets/img/drink.png');
-});
-
+    
+        sendMessageButton.addEventListener('click', getUserMessage);
+        userMessage.addEventListener('keyup', event => {
+            if (event.key === 'Enter') getUserMessage();
+        });
+    
+        products.forEach(product => {
+            const productElement = document.getElementById(product.name.toLowerCase());
+            if (productElement) {
+                productElement.addEventListener('click', () => showProductCard(product));
+            }
+        });
     </script>
+    
+
 
 </body>
+
 </html>
